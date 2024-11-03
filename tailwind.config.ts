@@ -16,9 +16,9 @@ const config: Config = {
         app: 'min-content max-content',
       },
       colors: {
-        primary: '#FF1C1C', // red
-        secondary: '#FFDE00', // yellow
-        tertiary: '#3B4CCA', // blue
+        red: '#FB1B1B',
+        yellow: '#FFCC00',
+        blue: '#0075BE',
       },
     },
   },
