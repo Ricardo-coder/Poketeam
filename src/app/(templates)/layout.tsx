@@ -1,3 +1,6 @@
+import { Header } from '@/components/fabrics'
+import { Logo } from '@/components/SSR/Logo'
+
 export default function DefaultLayout({
   children,
 }: Readonly<{
@@ -5,9 +8,9 @@ export default function DefaultLayout({
 }>) {
   return (
     <div className="mx-auto grid min-h-screen w-full max-w-[1600px] grid-rows-app gap-4 p-8">
-      <header>
-        <h1>Header</h1>
-      </header>
+      <Header>
+        <Logo />
+      </Header>
       <main>{children}</main>
       <footer>
         <span>footer</span>
