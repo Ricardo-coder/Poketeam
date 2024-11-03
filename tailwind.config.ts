@@ -10,9 +10,15 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['var(--font-roboto)', 'sans-serif'],
+        display: ['var(--font-pokemon)', 'sans-serif'],
       },
       gridTemplateRows: {
         app: 'min-content max-content',
+      },
+      colors: {
+        primary: '#FF1C1C', // red
+        secondary: '#FFDE00', // yellow
+        tertiary: '#3B4CCA', // blue
       },
     },
   },
