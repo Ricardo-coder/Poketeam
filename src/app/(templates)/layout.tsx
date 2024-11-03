@@ -4,7 +4,7 @@ export default function DefaultLayout({
   children: React.ReactNode
 }>) {
   return (
-    <>
+    <div className="mx-auto grid min-h-screen w-full max-w-[1600px] grid-rows-app gap-4 p-8">
       <header>
         <h1>Header</h1>
       </header>
@@ -12,6 +12,6 @@ export default function DefaultLayout({
       <footer>
         <span>footer</span>
       </footer>
-    </>
+    </div>
   )
 }

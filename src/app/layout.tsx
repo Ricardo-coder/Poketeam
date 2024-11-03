@@ -27,7 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${roboto.variable} ${pokemon.variable}`}>
-      <body style={{ margin: 0 }}>{children}</body>
+      <body
+        style={{ margin: 0 }}
+        className="bg-stone-300 dark:bg-stone-900 text-stone-900 dark:text-stone-300 antialiased"
+      >
+        {children}
+      </body>
     </html>
   )
 }
