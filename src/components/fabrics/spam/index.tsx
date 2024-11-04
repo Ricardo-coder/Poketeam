@@ -1,10 +1,5 @@
 import { createElement } from 'react'
 
-interface SpamProps {
-  children: React.ReactNode
-  className?: string
-}
-
-export function Spam({ children, className }: SpamProps) {
+export function Spam({ children, className }: Fabric) {
   return createElement('spam', { className }, children)
 }

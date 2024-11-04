@@ -1,11 +1,6 @@
 import { createElement } from 'react'
 
-interface SectionProps {
-  children: React.ReactNode
-  className?: string
-}
-
-export function Section({ children, className }: SectionProps) {
+export function Section({ children, className }: Fabric) {
   return createElement(
     'section',
     {
