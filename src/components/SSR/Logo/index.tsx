@@ -1,7 +1,13 @@
+/**
+ * The `Logo` component renders the logo of the application.
+ * It consists of two text elements "Poké" and "Team" with a Pokéball image in between.
+ *
+ * @returns {JSX.Element} The rendered logo component.
+ */
 import { Section, Spam } from '@/components/fabrics'
 import Image from 'next/image'
 
-export function Logo() {
+export function Logo(): JSX.Element {
   return (
     <Section className="flex items-center justify-center">
       <Spam className="text-3xl md:text-5xl font-display -mr-4 z-10 text-yellow text-shadow-lg shadow-blue">
