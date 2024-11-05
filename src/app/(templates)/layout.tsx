@@ -1,4 +1,5 @@
-import { Header } from '@/components/fabrics'
+import { Rights } from '@/components/CSR'
+import { Footer, Header } from '@/components/fabrics'
 import { Logo } from '@/components/SSR/Logo'
 
 export default function DefaultLayout({
@@ -12,9 +13,9 @@ export default function DefaultLayout({
         <Logo />
       </Header>
       <main>{children}</main>
-      <footer>
-        <span>footer</span>
-      </footer>
+      <Footer className="flex flex-col justify-center align-center border-solid border-t-2 p-8 border-stone-300">
+        <Rights />
+      </Footer>
     </div>
   )
 }
