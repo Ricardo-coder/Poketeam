@@ -13,7 +13,7 @@ export default function DefaultLayout({
         <Logo />
       </Header>
       <main>{children}</main>
-      <Footer className="flex flex-col justify-center align-center border-solid border-t-2 p-8 border-stone-300">
+      <Footer className="flex flex-col justify-center align-center border-solid border-t-2 p-8 border-stone-900 dark:border-stone-300">
         <Rights />
       </Footer>
     </div>
