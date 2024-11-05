@@ -15,10 +15,10 @@ describe('Logo Component', () => {
     const { getByAltText, getByText } = render(<Logo />)
 
     expect(getByText('Poké')).toHaveClass(
-      'text-3xl md:text-5xl font-display -mr-4 z-10 text-yellow text-shadow-lg shadow-blue',
+      'text-3xl md:text-5xl font-display -mr-5 z-10 text-yellow text-shadow-lg shadow-blue',
     )
     expect(getByText('Team')).toHaveClass(
-      'text-3xl md:text-5xl font-display -ml-4 z-10 text-blue text-shadow-lg shadow-yellow',
+      'text-3xl md:text-5xl font-display -ml-5 z-10 text-red text-shadow-lg shadow-yellow',
     )
     expect(getByAltText('Logo')).toHaveClass('z-0 w-16 md:w-24')
   })
