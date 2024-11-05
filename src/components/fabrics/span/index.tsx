@@ -7,9 +7,9 @@
  */
 import React, { createElement } from 'react'
 
-export function Spam({
+export function Span({
   children,
   ...props
 }: React.PropsWithChildren<React.HTMLAttributes<HTMLElement>>): JSX.Element {
-  return createElement('spam', props, children)
+  return createElement('span', props, children)
 }
