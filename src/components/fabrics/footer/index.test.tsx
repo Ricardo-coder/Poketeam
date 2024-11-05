@@ -1,30 +1,22 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import { Footer } from './index'
-import '@testing-library/jest-dom'
 
 describe('Footer component', () => {
-  it('renders the footer with the provided className and children', () => {
-    const { getByText } = render(
-      <Footer className="test-class">
-        <div>Test Content</div>
-      </Footer>,
-    )
-
-    const footerElement = getByText('Test Content').parentElement
-    expect(footerElement).toBeInTheDocument()
-    expect(footerElement).toHaveClass('test-class')
+  it('should render without crashing', () => {
+    const { container } = render(<Footer>Test Content</Footer>)
+    expect(container).toBeInTheDocument()
   })
 
-  it('renders the footer without className', () => {
-    const { getByText } = render(
-      <Footer>
-        <div>Test Content</div>
-      </Footer>,
-    )
+  it('should render children correctly', () => {
+    const { getByText } = render(<Footer>Test Content</Footer>)
+    expect(getByText('Test Content')).toBeInTheDocument()
+  })
 
-    const footerElement = getByText('Test Content').parentElement
-    expect(footerElement).toBeInTheDocument()
-    expect(footerElement).not.toHaveAttribute('class')
+  it('should pass additional props to the footer element', () => {
+    const { container } = render(
+      <Footer className="test-class">Test Content</Footer>,
+    )
+    expect(container.firstChild).toHaveClass('test-class')
   })
 })

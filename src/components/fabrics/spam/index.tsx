@@ -1,13 +1,15 @@
 /**
- * A functional component that renders a custom HTML element 'spam'.
+ * A React component that renders a custom HTML element named 'spam'.
  *
- * @param {Fabric} props - The properties object.
- * @param {React.ReactNode} props.children - The child elements to be rendered inside the 'spam' element.
- * @param {string} [props.className] - An optional class name to apply to the 'spam' element.
- * @returns {React.ReactElement} The rendered 'spam' element with the provided children and class name.
+ * @param {React.PropsWithChildren<React.HTMLAttributes<HTMLElement>>} props - The props for the component.
+ * @param {React.ReactNode} props.children - The children elements to be rendered inside the 'spam' element.
+ * @returns {JSX.Element} The rendered 'spam' element with the provided props and children.
  */
-import { createElement } from 'react'
+import React, { createElement } from 'react'
 
-export function Spam({ children, className }: Fabric): JSX.Element {
-  return createElement('spam', { className }, children)
+export function Spam({
+  children,
+  ...props
+}: React.PropsWithChildren<React.HTMLAttributes<HTMLElement>>): JSX.Element {
+  return createElement('spam', props, children)
 }

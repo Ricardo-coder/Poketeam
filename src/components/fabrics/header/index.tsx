@@ -1,19 +1,15 @@
 /**
- * Header component that renders a header element with the given className and children.
+ * A functional component that renders a header element.
  *
- * @param {Fabric} props - The properties for the Header component.
- * @param {React.ReactNode} props.children - The content to be rendered inside the header.
- * @param {string} props.className - The CSS class to be applied to the header element.
+ * @param {React.PropsWithChildren<React.HTMLAttributes<HTMLElement>>} props - The props for the header component.
+ * @param {React.ReactNode} props.children - The children elements to be rendered inside the header.
  * @returns {JSX.Element} The rendered header element.
  */
 import { createElement } from 'react'
 
-export function Header({ children, className }: Fabric): JSX.Element {
-  return createElement(
-    'header',
-    {
-      className,
-    },
-    children,
-  )
+export function Header({
+  children,
+  ...props
+}: React.PropsWithChildren<React.HTMLAttributes<HTMLElement>>): JSX.Element {
+  return createElement('header', props, children)
 }

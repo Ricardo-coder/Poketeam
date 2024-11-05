@@ -1,23 +1,24 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import { Section } from './index'
-import '@testing-library/jest-dom'
 
 describe('Section component', () => {
+  it('renders without crashing', () => {
+    const { container } = render(<Section />)
+    expect(container.firstChild).toBeInTheDocument()
+  })
+
   it('renders children correctly', () => {
-    const { getByText } = render(<Section>Test Section</Section>)
-    expect(getByText('Test Section')).toBeInTheDocument()
+    const { getByText } = render(<Section>Test Content</Section>)
+    expect(getByText('Test Content')).toBeInTheDocument()
   })
 
-  it('applies className correctly', () => {
+  it('passes additional props to the section element', () => {
     const { container } = render(
-      <Section className="test-class">Test Section</Section>,
+      <Section id="test-id" className="test-class" />,
     )
-    expect(container.firstChild).toHaveClass('test-class')
-  })
-
-  it('renders without className', () => {
-    const { container } = render(<Section>Test Section</Section>)
-    expect(container.firstChild).not.toHaveClass()
+    const sectionElement = container.firstChild
+    expect(sectionElement).toHaveAttribute('id', 'test-id')
+    expect(sectionElement).toHaveClass('test-class')
   })
 })

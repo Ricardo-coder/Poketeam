@@ -1,4 +1,6 @@
+export { Footer } from './footer'
 export { Header } from './header'
 export { Input } from './input'
+export { Paragraph } from './paragraph'
 export { Section } from './section'
 export { Spam } from './spam'
