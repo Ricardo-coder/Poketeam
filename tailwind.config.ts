@@ -14,7 +14,7 @@ const config: Config = {
         display: ['var(--font-pokemon)', 'sans-serif'],
       },
       gridTemplateRows: {
-        app: 'min-content max-content min-content',
+        app: 'min-content auto min-content',
       },
       colors: {
         red: '#FB1B1B',
