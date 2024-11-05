@@ -13,7 +13,7 @@ export function Logo(): JSX.Element {
 
   return (
     <Section className="flex items-center justify-center">
-      <Spam className="text-3xl md:text-5xl font-display -mr-4 z-10 text-yellow text-shadow-lg shadow-blue">
+      <Spam className="text-3xl md:text-5xl font-display -mr-5 z-10 text-yellow text-shadow-lg shadow-blue">
         {name1}
       </Spam>
       <Image
@@ -23,7 +23,7 @@ export function Logo(): JSX.Element {
         width={90}
         height={90}
       />
-      <Spam className="text-3xl md:text-5xl font-display -ml-4 z-10 text-red text-shadow-lg shadow-yellow">
+      <Spam className="text-3xl md:text-5xl font-display -ml-5 z-10 text-red text-shadow-lg shadow-yellow">
         {name2}
       </Spam>
     </Section>
