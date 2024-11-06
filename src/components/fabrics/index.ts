@@ -1,6 +1,7 @@
 export { Footer } from './footer'
 export { Header } from './header'
 export { Input } from './input'
+export { Main } from './main'
 export { Paragraph } from './paragraph'
 export { Section } from './section'
 export { Span } from './span'
