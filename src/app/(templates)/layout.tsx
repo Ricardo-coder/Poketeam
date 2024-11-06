@@ -1,3 +1,4 @@
+import React from 'react'
 import { Rights } from '@/components/CSR'
 import { Footer, Header, Main } from '@/components/fabrics'
 import { Logo } from '@/components/SSR/Logo'
@@ -12,7 +13,7 @@ export default function DefaultLayout({
       <Header>
         <Logo />
       </Header>
-      <Main>{children}</Main>
+      <Main className="w-100 h-100">{children}</Main>
       <Footer className="flex flex-col justify-center align-center border-solid border-t-2 p-8 border-stone-900 dark:border-stone-300">
         <Rights />
       </Footer>
